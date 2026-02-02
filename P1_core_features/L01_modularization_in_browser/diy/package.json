@@ -1,0 +1,14 @@
+{
+  "name": "s17l01",
+  "version": "1.0.0",
+  "description": "S17L01: Module systems in browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PeacefulWinter",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
