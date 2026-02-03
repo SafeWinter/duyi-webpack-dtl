@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+.box {
+  padding: 0.5em;
+  height: 600px;
+  background: #172f38;
+  overflow-y: auto;
+
+  color: #d7dbdd;
+  cursor: pointer;
+  user-select: none;
+
+  position: relative;
+
+  & > .pool {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div {
+      width: 50px;
+      padding-block: 0.25em;
+      line-height: 1rem;
+      text-align: center;
+
+      &.prime {
+        font-weight: 700;
+        color: violet;
+      }
+    }
+  }
+
+  & > .current {
+    position: fixed;
+    top: 39vh;
+    left: 50%;
+    /* border: 1px solid violet; */
+    & > .n {
+      position: absolute;
+      font-size: 8rem;
+      line-height: 8rem;
+      transform: translate(-50%, -50%);
+      opacity: 0.65;
+      /* border: 1px solid violet; */
+    }
+  }
+}
