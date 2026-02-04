@@ -94,7 +94,43 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_isPrime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/isPrime.js */ \"./src/util/isPrime.js\");\n// import './util/mockdata.js';\r\n\r\n\r\nconsole.log(\"index module\");\r\n\r\n[1, 2, 3, 4, 5].forEach((n) =>\r\n  console.log(`Is ${n} a prime? ${Object(_util_isPrime_js__WEBPACK_IMPORTED_MODULE_0__[\"isPrime\"])(n) ? \"Y\" : \"N\"}`),\r\n);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pages_event_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/event.js */ \"./src/pages/event.js\");\n\r\n\r\nconsole.log(\"index module\");\r\nObject(_pages_event_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(500);\r\n\r\n// import './util/mockdata.js';\r\n\r\n// refactored util module\r\n// import {isPrime, randColor} from './util'\r\n\r\n\r\n// test isPrime()\r\n// [1, 2, 3, 4, 5].forEach((n) =>\r\n//   console.log(`Is ${n} a prime? ${isPrime(n) ? \"Y\" : \"N\"}`),\r\n// );\r\n\r\n// test randColor()\r\n// console.log(randColor());\r\n\r\n// function draw(n, checker = isPrime) {\r\n//   const pool = document.querySelector('.pool');\r\n//   const center = document.querySelector('.n');\r\n//   const div = document.createElement('div');\r\n//   if(checker(n)) {\r\n//     div.classList.add('prime');\r\n//     div.style.color = randColor();\r\n//   }\r\n//   div.innerHTML = `${n}`;\r\n//   pool.appendChild(div);\r\n//   center.innerHTML = `${n}`;\r\n// }\r\n\r\n// [1,2,3,4,5,6,7,8,9].forEach(n => draw(n, isPrime));\r\n\r\n// let counter = 0;\r\n// let timer;\r\n// function start(interval = 500) {\r\n//   if(timer) {\r\n//     return;\r\n//   }\r\n//   timer = setInterval(() => {\r\n//     draw(++counter);\r\n//     if(counter >= 20) {\r\n//       stop();\r\n//     }\r\n//   }, interval);\r\n// }\r\n\r\n// function stop() {\r\n//   clearInterval(timer);\r\n//   timer = null;\r\n// }\r\n\r\n// start()\r\n\r\n// import {drawPrime} from './pages/printNumber.js';\r\n// drawPrime(30);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/event.js":
+/*!****************************!*\
+  !*** ./src/pages/event.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return checkPrime; });\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util */ \"./src/util/index.js\");\n/* harmony import */ var _printNumber_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./printNumber.js */ \"./src/pages/printNumber.js\");\n\r\n\r\n\r\nfunction checkPrime(interval = 800) {\r\n  const checker = new _util__WEBPACK_IMPORTED_MODULE_0__[\"NumberChecker\"](interval);\r\n  checker.performTask = _printNumber_js__WEBPACK_IMPORTED_MODULE_1__[\"draw\"];\r\n\r\n  let activated = false;\r\n  window.onclick = function() {\r\n    activated = !activated;\r\n    if(activated) {\r\n      checker.start();\r\n    } else {\r\n      checker.stop();\r\n    }\r\n  }\r\n}\n\n//# sourceURL=webpack:///./src/pages/event.js?");
+
+/***/ }),
+
+/***/ "./src/pages/printNumber.js":
+/*!**********************************!*\
+  !*** ./src/pages/printNumber.js ***!
+  \**********************************/
+/*! exports provided: draw, drawPrime */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"draw\", function() { return draw; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"drawPrime\", function() { return drawPrime; });\n/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util */ \"./src/util/index.js\");\n\r\n\r\nconst pool = document.querySelector('.pool');\r\nconst center = document.querySelector('.n');\r\nconst current = document.querySelector('.current');\r\n// const msg = document.querySelector('.msg'); // 用于调试偏移量\r\n\r\nfunction draw(n, checker = _util__WEBPACK_IMPORTED_MODULE_0__[\"isPrime\"]) {\r\n  const div = document.createElement('div');\r\n  if(checker(n)) {\r\n    div.classList.add('prime');\r\n    \r\n    const color = Object(_util__WEBPACK_IMPORTED_MODULE_0__[\"randColor\"])();\r\n    div.style.color = color;\r\n    drawPrime(n, color);\r\n  }\r\n  div.innerHTML = `${n}`;\r\n  pool.appendChild(div);\r\n\r\n  center.innerHTML = `${n}`;\r\n  center.classList.toggle('hidden', checker(n));\r\n}\r\n\r\nfunction drawPrime(n, color) {\r\n  // target: <span class=\"n prime\">20</span>\r\n  const span = document.createElement('span');\r\n  span.classList.add('n', 'prime');\r\n  span.style.color = color;\r\n  span.innerHTML = n;\r\n  current.appendChild(span);\r\n\r\n  span.clientHeight;  // force render\r\n  \r\n  const rx = Object(_util__WEBPACK_IMPORTED_MODULE_0__[\"randIndex\"])(150, -350), ry = Object(_util__WEBPACK_IMPORTED_MODULE_0__[\"randIndex\"])(150, -350);\r\n  // msg.innerHTML = `(${rx}, ${ry})`;  // 用于调试偏移量\r\n  span.style.transform = `translate(${rx}px, ${ry}px)`;\r\n  span.style.opacity = '0';\r\n\r\n  // 淡出后删除元素\r\n  span.ontransitionend = ev => ev.target.remove();\r\n}\n\n//# sourceURL=webpack:///./src/pages/printNumber.js?");
+
+/***/ }),
+
+/***/ "./src/util/index.js":
+/*!***************************!*\
+  !*** ./src/util/index.js ***!
+  \***************************/
+/*! exports provided: isPrime, randIndex, randColor, NumberChecker */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _isPrime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isPrime.js */ \"./src/util/isPrime.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"isPrime\", function() { return _isPrime_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _randColor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./randColor.js */ \"./src/util/randColor.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"randIndex\", function() { return _randColor_js__WEBPACK_IMPORTED_MODULE_1__[\"randIndex\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"randColor\", function() { return _randColor_js__WEBPACK_IMPORTED_MODULE_1__[\"randColor\"]; });\n\n/* harmony import */ var _number_checker_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./number-checker.js */ \"./src/util/number-checker.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"NumberChecker\", function() { return _number_checker_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/util/index.js?");
 
 /***/ }),
 
@@ -102,11 +138,35 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /*!*****************************!*\
   !*** ./src/util/isPrime.js ***!
   \*****************************/
-/*! exports provided: isPrime */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isPrime\", function() { return isPrime; });\nconst isPrime = (n) => {\r\n  if(n < 2) {\r\n    return false;\r\n  }\r\n  \r\n  for(let i = 2, len = Math.ceil(n ** 0.5); i <= len; i++) {\r\n    if(n % i === 0) {\r\n      return false;\r\n    }\r\n  }\r\n  return true;\r\n};\n\n//# sourceURL=webpack:///./src/util/isPrime.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ((n) => {\r\n  if (n === 2) return true;\r\n  \r\n  if(n < 2 || n % 2 === 0) {\r\n    return false;\r\n  }\r\n  \r\n  for(let i = 3, len = Math.sqrt(n); i <= len; i+=2) {\r\n    if(n % i === 0) {\r\n      return false;\r\n    }\r\n  }\r\n  return true;\r\n});\n\n//# sourceURL=webpack:///./src/util/isPrime.js?");
+
+/***/ }),
+
+/***/ "./src/util/number-checker.js":
+/*!************************************!*\
+  !*** ./src/util/number-checker.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return NumberChecker; });\nclass NumberChecker {\r\n  constructor(interval = 500, counter = 1) {\r\n    this.interval = interval;\r\n    this.timer = null;\r\n    this.counter = counter;\r\n  }\r\n\r\n  start() {\r\n    if(this.timer) {\r\n      return;\r\n    }\r\n    this.timer = setInterval(() => {\r\n      this.performTask(this.counter++);\r\n    }, this.interval);\r\n  }\r\n\r\n  stop() {\r\n    clearInterval(this.timer);\r\n    this.timer = null;\r\n  }\r\n\r\n}\n\n//# sourceURL=webpack:///./src/util/number-checker.js?");
+
+/***/ }),
+
+/***/ "./src/util/randColor.js":
+/*!*******************************!*\
+  !*** ./src/util/randColor.js ***!
+  \*******************************/
+/*! exports provided: randIndex, randColor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"randIndex\", function() { return randIndex; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"randColor\", function() { return randColor; });\nconst randIndex = (end, start = 0) => \r\n  Math.floor(Math.random() * (end - start) + start); \r\n\r\nconst randColor = () => Array.from({length: 3}, (_, i) => i)\r\n  .map(_ => randIndex(255, 100).toString(16).padStart(2, '0'))\r\n  .reduce((prefix, hex) => prefix + hex, '#')\r\n  .toUpperCase();\n\n//# sourceURL=webpack:///./src/util/randColor.js?");
 
 /***/ })
 

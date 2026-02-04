@@ -25,8 +25,9 @@
       text-align: center;
 
       &.prime {
+        font-size: 1.2em;
         font-weight: 700;
-        color: violet;
+        /* color: violet; */
       }
     }
   }
@@ -38,11 +39,29 @@
     /* border: 1px solid violet; */
     & > .n {
       position: absolute;
-      font-size: 8rem;
-      line-height: 8rem;
+      font-size: 9rem;
+      font-weight: 700;
       transform: translate(-50%, -50%);
       opacity: 0.65;
       /* border: 1px solid violet; */
+
+      &.prime {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        
+        /* 设置过渡属性 */
+        transition: 
+          transform 500ms linear 500ms,
+          opacity 0.7s ease-out 0.3s;
+
+        &.animate { /* 静态调试用 */
+          transform: translate(200px, 200px); /* 实际改为随机偏移量 */
+          opacity: 0;
+        }
+      }
+    }
+    & .hidden {
+      opacity: 0;
     }
   }
 }
