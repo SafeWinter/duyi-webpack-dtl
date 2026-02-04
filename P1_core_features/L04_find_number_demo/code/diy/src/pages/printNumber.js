@@ -1,42 +1,41 @@
-import { isPrime, randColor, randIndex } from '../util'
+import { isPrime, randColor, randIndex } from '../util';
+import $ from 'jquery';
 
 const DOM = {
-  pool: document.querySelector('.pool'),
-  center: document.querySelector('.n'),
-  current: document.querySelector('.current')
+  pool: $('.pool'),
+  center: $('.n'),
+  current: $('.current')
 };
 
 export function draw(n, checker = isPrime) {
-  const div = document.createElement('div');
+  const div = $('<div>');
   if(checker(n)) {
-    div.classList.add('prime');
-    
     const color = randColor();
-    div.style.color = color;
+    div.addClass('prime')
+      .css('color', color);
     drawPrime(n, color);
   }
-  div.innerHTML = `${n}`;
-  DOM.pool.appendChild(div);
+  DOM.pool.append(div.html(`${n}`));
 
-  DOM.center.innerHTML = `${n}`;
-  DOM.center.classList.toggle('hidden', checker(n));
+  DOM.center.html(`${n}`)
+    .toggleClass('hidden', checker(n));
 }
 
 export function drawPrime(n, color) {
   // target: <span class="n prime">20</span>
-  const span = document.createElement('span');
-  span.classList.add('n', 'prime');
-  span.style.color = color;
-  span.innerHTML = n;
-  DOM.current.appendChild(span);
+  const span = $('<span>')
+    .addClass(['n', 'prime'])
+    .html(n)
+    .css('color', color);
+  DOM.current.append(span);
 
-  span.clientHeight;  // force render
+  span.get(0).clientHeight;  // force render
   
   const rx = randIndex(150, -350), 
     ry = randIndex(150, -350);
-  span.style.transform = `translate(${rx}px, ${ry}px)`;
-  span.style.opacity = '0';
+  span.css('transform', `translate(${rx}px, ${ry}px)`)
+    .css('opacity', 0);
 
   // 淡出后删除元素
-  span.ontransitionend = ev => ev.target.remove();
+  span.on('transitionend', ev => ev.target.remove());
 }

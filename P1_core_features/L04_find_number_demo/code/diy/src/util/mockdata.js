@@ -1,19 +1,20 @@
-const pool = document.querySelector(".pool");
+import $ from 'jquery';
+
+const pool = $(".pool");
 const frag = Array.from({ length: 600 }, (_, i) => i + 1)
   .map((n) => {
-    const div = document.createElement("div");
+    const div = $("<div>");
     if (Math.random() > 0.7) {
-      div.classList.add("prime");
+      div.addClass("prime");
     }
-    div.innerHTML = n;
-    return div;
+    div.html(n);
+    return div.get(0);
   })
   .reduce(
     (tank, e) => (tank.appendChild(e), tank),
     document.createDocumentFragment(),
   );
 
-pool.innerHTML = "";
-pool.appendChild(frag);
+pool.html('').append(frag);
 
-document.querySelector('.n').innerHTML="20";
+$('.n').html(20);

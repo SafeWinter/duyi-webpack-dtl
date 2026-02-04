@@ -1,3 +1,4 @@
+// import './util/mockdata.js';
 import checkPrime from './pages/event.js';
 
 console.log("index module");
