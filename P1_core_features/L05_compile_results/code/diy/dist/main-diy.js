@@ -26,6 +26,6 @@ const RES = (function(modules){
     eval("console.log(\"module a\");\n_module.exports = \"a\";\n\n\n//# sourceURL=webpack:///./src/a.js?");
   },
   './src/index.js'(module, exports, _require) {
-    eval("console.log(\"module index\");\nvar a = _require(/*! ./a */ \"./src/a.js\");\na.bug();\nconsole.log(a);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+    eval("console.log(\"module index\");\nvar a = _require(/*! ./a */ \"./src/a.js\");\nconsole.log(a);\n\n\n//# sourceURL=webpack:///./src/index.js?");
   }
 });
