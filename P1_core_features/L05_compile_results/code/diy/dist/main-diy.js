@@ -23,12 +23,9 @@ const RES = (function(modules){
   return _require('./src/index.js');
 })({
   './src/a.js'(_module, exports, _require) {
-    console.log("module a");
-    _module.exports = "a";
+    eval("console.log(\"module a\");\n_module.exports = \"a\";\n\n\n//# sourceURL=webpack:///./src/a.js?");
   },
   './src/index.js'(module, exports, _require) {
-    console.log("module index");
-    var a = _require("./src/a.js");
-    console.log(a);
+    eval("console.log(\"module index\");\nvar a = _require(/*! ./a */ \"./src/a.js\");\nconsole.log(a);\n\n\n//# sourceURL=webpack:///./src/index.js?");
   }
 });
