@@ -1,9 +1,10 @@
 import { isPrime, randColor, randIndex } from '../util'
 
-const pool = document.querySelector('.pool');
-const center = document.querySelector('.n');
-const current = document.querySelector('.current');
-// const msg = document.querySelector('.msg'); // 用于调试偏移量
+const DOM = {
+  pool: document.querySelector('.pool'),
+  center: document.querySelector('.n'),
+  current: document.querySelector('.current')
+};
 
 export function draw(n, checker = isPrime) {
   const div = document.createElement('div');
@@ -15,10 +16,10 @@ export function draw(n, checker = isPrime) {
     drawPrime(n, color);
   }
   div.innerHTML = `${n}`;
-  pool.appendChild(div);
+  DOM.pool.appendChild(div);
 
-  center.innerHTML = `${n}`;
-  center.classList.toggle('hidden', checker(n));
+  DOM.center.innerHTML = `${n}`;
+  DOM.center.classList.toggle('hidden', checker(n));
 }
 
 export function drawPrime(n, color) {
@@ -27,12 +28,12 @@ export function drawPrime(n, color) {
   span.classList.add('n', 'prime');
   span.style.color = color;
   span.innerHTML = n;
-  current.appendChild(span);
+  DOM.current.appendChild(span);
 
   span.clientHeight;  // force render
   
-  const rx = randIndex(150, -350), ry = randIndex(150, -350);
-  // msg.innerHTML = `(${rx}, ${ry})`;  // 用于调试偏移量
+  const rx = randIndex(150, -350), 
+    ry = randIndex(150, -350);
   span.style.transform = `translate(${rx}px, ${ry}px)`;
   span.style.opacity = '0';
 

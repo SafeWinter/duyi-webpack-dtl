@@ -18,5 +18,4 @@ export default class NumberChecker {
     clearInterval(this.timer);
     this.timer = null;
   }
-
 }
