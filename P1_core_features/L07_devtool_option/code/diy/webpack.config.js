@@ -1,5 +1,5 @@
 module.exports = {
   mode: "development",
-  devtool: "eval-cheap-module-source-map",
+  devtool: "eval",
   watch: true,
 };
