@@ -1,8 +1,6 @@
-const loaderUtils = require('loader-utils');
-
 module.exports = function (srcCode) {
   console.log('source code:', `[${srcCode}]`);
-  const { changeVar } = loaderUtils.getOptions(this);
+  const { changeVar } = this.getOptions();
   console.log('param changeVar =', changeVar);
   const regexp = new RegExp(changeVar, 'g');
   // Do convertion
