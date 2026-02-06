@@ -1,0 +1,17 @@
+{
+  "name": "s17l11-diy",
+  "version": "1.0.0",
+  "description": "S17L11 DIY demo: Webpack Loader configs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [],
+  "author": "PeacefulWinter",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
