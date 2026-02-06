@@ -181,3 +181,41 @@ loader3
 > `loader` 中可否按 `ES6` 的模块化标准书写处理逻辑？
 >
 > （不可以，因为 `loader` 是在 `Webpack` 打包过程中运行的，此时处于 `node` 环境中，而 `Webpack` 并没有考虑这种情况，因此只能采用 `CommonJS` 规范）
+
+
+
+## 5 实测备忘
+
+:one: 关于 `loader-utils` 接口已作废的问题。
+
+实测时发现新版 `loader-utils` 工具库已经废弃 `loaderUtils.getOptions(this);` 的写法了，只有安装视频中指定的版本（`v1.2.3`）才行：
+
+```bash
+> npm i -D loader-utils@1.2.3
+```
+
+获取 `options` 参数的最新方案是升级到 `Webpack 5`（无需安装开发依赖包 `loader-utils`），直接使用 `Webpack` 内置的 `this.getOptions()` 来获取自定义参数：
+
+```js
+// Webpack 5
+module.exports = function (srcCode) {
+  console.log('source code:', `[${srcCode}]`);
+  const { changeVar } = this.getOptions();
+  console.log('param changeVar =', changeVar);
+  const regexp = new RegExp(changeVar, 'g');
+  // Do convertion
+  return regexp.test(srcCode) ? srcCode.replace(regexp, 'var') : srcCode;
+};
+```
+
+旧版打包结果：
+
+![](../../assets/11.6.png)
+
+新版打包结果（命令行更简洁）：
+
+![](../../assets/11.7.png)
+
+将打包后的 `JS` 文件引入 `index.html`：
+
+![](../../assets/11.8.png)
