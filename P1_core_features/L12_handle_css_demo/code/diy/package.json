@@ -1,0 +1,18 @@
+{
+  "name": "s17l12-diy",
+  "version": "1.0.0",
+  "description": "S17L12 DIY demo: handle CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [],
+  "author": "PeacefulWinter",
+  "license": "ISC",
+  "devDependencies": {
+    "loader-utils": "^1.2.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
