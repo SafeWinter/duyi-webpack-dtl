@@ -1,5 +1,12 @@
-require('@/components/sub1/sub2/sub3/foo');
-const packageJson = require('_/package.json');
+const $ = require('jquery');
+const _ = require('lodash');
 
-console.log("module index");
-console.log('项目名称:', packageJson.name);
+$(function() {
+  $('h1').css({
+    'font-style': 'italic',
+    'background': '#eee'
+  });
+});
+
+const arr = _.map([1, 2, 3], n => n ** 2);
+console.log('arr:', arr);
