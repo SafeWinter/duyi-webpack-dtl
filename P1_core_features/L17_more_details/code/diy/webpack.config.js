@@ -2,6 +2,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    library: 'abc'
+    library: 'abc',
+    libraryTarget: 'window'
   }
 };
