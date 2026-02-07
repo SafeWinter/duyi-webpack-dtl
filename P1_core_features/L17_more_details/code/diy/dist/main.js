@@ -1,4 +1,3 @@
-window["abc"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -92,9 +91,20 @@ window["abc"] =
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const fs = __webpack_require__(/*! fs */ \"fs\");\r\nconsole.log(\"module index\");\r\nconsole.log(fs);\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"module index\");\r\nmodule.exports = {\r\n  library: 'DIY: output.library option in actoin'\r\n}\n\n//# sourceURL=webpack://abc/./src/index.js?");
+eval("module.exports = require(\"fs\");\n\n//# sourceURL=webpack:///external_%22fs%22?");
 
 /***/ })
 
