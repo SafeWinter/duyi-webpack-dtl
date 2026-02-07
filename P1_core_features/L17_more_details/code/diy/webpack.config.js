@@ -1,5 +1,7 @@
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
-  target: "node"
+  module: {
+    // noParse: /jquery/
+  },
 };

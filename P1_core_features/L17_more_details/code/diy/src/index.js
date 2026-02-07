@@ -1,3 +1,3 @@
-const fs = require('fs');
+const $ = require('jquery');
 console.log("module index");
-console.log(fs);
+console.log('$ = ', $);
