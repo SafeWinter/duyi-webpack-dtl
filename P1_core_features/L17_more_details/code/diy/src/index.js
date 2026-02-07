@@ -1,3 +1,2 @@
-const $ = require('jquery');
+require('./a');
 console.log("module index");
-console.log('$ = ', $);
