@@ -1,7 +1,7 @@
 {
-  "name": "s17l19-diy",
+  "name": "s17l20-diy",
   "version": "1.0.0",
-  "description": "S17L19 DIY demo: html-webpack-plugin",
+  "description": "S17L20 DIY demo: copy-webpack-plugin",
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
