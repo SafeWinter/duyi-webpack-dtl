@@ -16,8 +16,9 @@ module.exports = {
     rules: [
       { test: /\.(png)|(gif)|(jpg)$/, use: [
         {
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
+            limit: 50 * 1024, // 50Kb
             name: '[hash:5].[ext]'
           }
         }
