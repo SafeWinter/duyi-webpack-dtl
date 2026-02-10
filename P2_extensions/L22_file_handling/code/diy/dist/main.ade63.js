@@ -90,10 +90,12 @@
 /*!********************************!*\
   !*** ./src/assets/webpack.png ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/url-loader/dist/cjs.js):\nError: Cannot find module 'file-loader'\nRequire stack:\n- F:\\mydesktop\\wpDemo\\node_modules\\url-loader\\dist\\index.js\n- F:\\mydesktop\\wpDemo\\node_modules\\url-loader\\dist\\cjs.js\n- F:\\mydesktop\\wpDemo\\node_modules\\loader-runner\\lib\\loadLoader.js\n- F:\\mydesktop\\wpDemo\\node_modules\\loader-runner\\lib\\LoaderRunner.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack\\lib\\NormalModule.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack\\lib\\NormalModuleFactory.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack\\lib\\Compiler.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack\\lib\\webpack.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack-cli\\bin\\utils\\validate-options.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack-cli\\bin\\utils\\convert-argv.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack-cli\\bin\\cli.js\n- F:\\mydesktop\\wpDemo\\node_modules\\webpack\\bin\\webpack.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:931:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:774:27)\n    at Module.require (internal/modules/cjs/loader.js:1003:19)\n    at require (F:\\mydesktop\\wpDemo\\node_modules\\v8-compile-cache\\v8-compile-cache.js:159:20)\n    at Object.loader (F:\\mydesktop\\wpDemo\\node_modules\\url-loader\\dist\\index.js:120:20)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a365d.png");
 
 /***/ }),
 
@@ -117,4 +119,4 @@ document.body.appendChild(img);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.2f66b.js.map
+//# sourceMappingURL=main.ade63.js.map
