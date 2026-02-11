@@ -1,12 +1,7 @@
-/*!
- * 
- *   hash:6706675c54a47ba67586
- *   chunkhash:da13033391e78c2ecfb1
- *   name:main
- *   author:yuanjin
- *   corporation:duyi
- *   
- */
+// main.67066.js
+// 2026/2/11 17:06:43
+
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

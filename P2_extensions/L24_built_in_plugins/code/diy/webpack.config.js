@@ -17,13 +17,14 @@ module.exports = {
       DOMAIN: JSON.stringify("duyi.com"),
     }),
     new BannerPlugin({
-      banner: `
-  hash:[hash]
-  chunkhash:[chunkhash]
-  name:[name]
-  author:yuanjin
-  corporation:duyi
-  `,
+      banner: (data) => {
+        // 只为特定文件添加banner
+        if (data.filename.endsWith(".js")) {
+          return `// ${data.filename}\n// ${new Date().toLocaleString()}\n\n`;
+        }
+        return ""; // 其他文件不加banner
+      },
+      raw: true,
     }),
     new ProvidePlugin({
       $: "jquery",
