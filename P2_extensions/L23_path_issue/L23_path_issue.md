@@ -137,14 +137,16 @@ npm run serve
 >
 > ```json
 > {
->   "liveServer.settings.port": 8080,
->   "liveServer.settings.root": "/dist/"
+> "liveServer.settings.port": 8080,
+> "liveServer.settings.root": "/dist/"
 > }
 > ```
 >
 > 这样只要将 `publicPath` 改回 `"/"` 就和 `devServer` 保持一致了（`f9a61ad`）：
 >
 > ![](../../assets/23.5.png)
+>
+> 更多自定义配置详见 `VSCode Live Server` 官方文档：[https://github.com/ritwickdey/vscode-live-server/blob/HEAD/docs/settings.md](https://github.com/ritwickdey/vscode-live-server/blob/HEAD/docs/settings.md)。
 
 
 
