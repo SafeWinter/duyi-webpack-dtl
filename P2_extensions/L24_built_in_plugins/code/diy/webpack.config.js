@@ -25,5 +25,9 @@ module.exports = {
   corporation:duyi
   `,
     }),
+    new ProvidePlugin({
+      $: "jquery",
+      _: "lodash",
+    }),
   ],
 };
