@@ -1,3 +1,12 @@
+/*!
+ * 
+ *   hash:23f0b07cba156b5545d4
+ *   chunkhash:b2c8765af18762fd16c0
+ *   name:main
+ *   author:yuanjin
+ *   corporation:duyi
+ *   
+ */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
