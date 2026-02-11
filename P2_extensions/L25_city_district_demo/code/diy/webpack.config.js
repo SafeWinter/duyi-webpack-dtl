@@ -1,22 +1,13 @@
-const { cleanWebpackPlugin, htmlWebpackPlugin } = require("./plugins");
+const baseCfg = require('./webpack.config.base');
+const devCfg = require('./webpack.config.dev');
+const prodCfg = require('./webpack.config.prod');
 
-module.exports = {
-  mode: "development",
-  devtool: "source-map",
-  entry: './src/index.js',
-  output: {
-    filename: "scripts/[name].[hash:5].js",
-  },
-  plugins: [
-    cleanWebpackPlugin,
-    htmlWebpackPlugin
-  ],
-  devServer: {
-    open: true,
-    stats: {
-      modules: false,
-      builtAt: false,
-      colors: true
-    }
-  },
+module.exports = function(env) {
+  if (env && env.prod) {
+    const options = {...baseCfg, ...prodCfg };
+    return options;
+  } else {
+    const options = {...baseCfg, ...devCfg };
+    return options;
+  }
 };
