@@ -1,5 +1,5 @@
 // const url = '/back/citylist';
-const url = '/api/citylist';
+const url = '/api/citylist'; // compatible with live server
 
 async function getCachedData() {
   const cache = localStorage.getItem('areas');

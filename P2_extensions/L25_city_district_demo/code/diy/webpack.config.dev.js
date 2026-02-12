@@ -1,5 +1,3 @@
-const {listHtmlPlugin, detailHtmlPlugin, copyWebpackPlugin } = require('./plugins');
-
 module.exports = {
   mode: 'development',
   devtool: "eval-source-map",
@@ -9,11 +7,13 @@ module.exports = {
     openPage: 'list.html',
     proxy: {
       // https://study.duyiedu.com/api/citylist
-      '/back': {
+      // '/back': {
+      //   target: 'https://study.duyiedu.com',
+      //   pathRewrite: {'^/back': '/api'},
+      // },
+      '/api': {
         target: 'https://study.duyiedu.com',
-        // changeOrigin: true,
-        pathRewrite: {'^/back': '/api'},
-      }
+      },
     },
   },
 }
