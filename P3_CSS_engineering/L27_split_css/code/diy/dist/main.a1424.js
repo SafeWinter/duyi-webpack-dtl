@@ -224,10 +224,11 @@ __webpack_require__.r(__webpack_exports__);
 
 console.log('module index');
 
-console.log({banner: (_assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default())});
-console.log('banner.toString():', _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a.toString());
+const style = document.createElement('style');
+style.innerHTML = _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a.toString();
+document.head.appendChild(style);
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.699e8.js.map
+//# sourceMappingURL=main.a1424.js.map
