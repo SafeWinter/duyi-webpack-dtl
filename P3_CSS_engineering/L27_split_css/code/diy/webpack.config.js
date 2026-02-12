@@ -18,7 +18,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      { test: /\.css$/, use: ['style-loader?injectType=singletonStyleTag', 'css-loader'] },
       { test: /\.(png)|(jp?g)|(gif)$/, use: ['file-loader'] },
     ]
   },

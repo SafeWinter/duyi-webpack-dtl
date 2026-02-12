@@ -573,10 +573,10 @@ var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/i
               content = [[module.i, content, '']];
             }
 
-var options = {};
+var options = {"injectType":"singletonStyleTag"};
 
 options.insert = "head";
-options.singleton = false;
+options.singleton = true;
 
 var update = api(content, options);
 
@@ -619,4 +619,4 @@ console.log('banner.toString():\n', _assets_banner_css__WEBPACK_IMPORTED_MODULE_
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.1d119.js.map
+//# sourceMappingURL=main.c61d0.js.map
