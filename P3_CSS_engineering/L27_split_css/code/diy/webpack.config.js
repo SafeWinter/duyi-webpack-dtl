@@ -10,5 +10,10 @@ module.exports = {
     htmlWebpackPlugin,
     copyWebpackPlugin,
     cleanWebpackPlugin
-  ]
+  ],
+  devtool: 'source-map',
+  stats: {
+    builtAt: false,
+    modules: false,
+  }
 }

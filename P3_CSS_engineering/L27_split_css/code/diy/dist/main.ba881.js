@@ -86,15 +86,35 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/assets/banner.css":
+/*!*******************************!*\
+  !*** ./src/assets/banner.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> .box {\n|   background-color: violet;\n|   width: 300px;");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log('module index');\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _assets_banner_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/banner.css */ "./src/assets/banner.css");
+/* harmony import */ var _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_banner_css__WEBPACK_IMPORTED_MODULE_0__);
+
+
+console.log('module index');
+
+console.log({banner: (_assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default())});
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.ba881.js.map
