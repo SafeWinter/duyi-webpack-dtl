@@ -11,7 +11,7 @@ module.exports = {
       // https://study.duyiedu.com/api/citylist
       '/back': {
         target: 'https://study.duyiedu.com',
-        changeOrigin: true,
+        // changeOrigin: true,
         pathRewrite: {'^/back': '/api'},
       }
     },

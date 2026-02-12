@@ -17,10 +17,10 @@ function renderProvinces(data) {
   
   $box.html('');
 
-  for(const p of data) {
+  for(const {id, label} of data) {
     $frag.append($('<li>').append($('<a>')
-      .html(p.label)
-      .prop('href', `/detail.html?id=${p.id}&name=${p.label}`)));
+      .html(label)
+      .prop('href', `/detail.html?id=${id}&name=${label}`)));
   }
   $box.append($frag);
 }

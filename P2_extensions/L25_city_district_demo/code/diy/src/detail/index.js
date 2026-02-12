@@ -6,10 +6,10 @@ console.log('module detail');
 
 $(async function() {
   // console.log(window.location.search);
-  const {id, name} = getParams(window.location.search);
-  const cities = await getCities(id);
-  console.log('cities', cities);
-  renderCities(cities, name);
+  const {id, name, cid} = getParams(window.location.search);
+  const data = await getCities(id, cid);
+  console.log('detail list:', data);
+  renderList(data, name, id);
 });
 
 function getParams(search) {
@@ -23,7 +23,7 @@ function getParams(search) {
   return params;
 }
 
-function renderCities(cities, name) {
+function renderList(data, name, pid) {
   /*<h1 class="title">四川省</h1>
       <dl>
         <dt>管辖城市</dt> */
@@ -33,11 +33,19 @@ function renderCities(cities, name) {
 
   $title.html(name);
 
-  for(const city of cities) {
-    $frag.append($('<dd>')
-      .html(city.label)
-      .prop('lang', city.value));
+  let isCity;
+  for(const {id, label, isLeaf} of data) {
+    const $dd = $('<dd>')
+      .attr('data-id', id);
+    if(isLeaf) {
+      isCity = false;
+      $dd.html(label);
+    } else {
+      isCity = true;
+      $dd.html(`<a href="/detail.html?id=${pid}&cid=${id}&name=${label}">${label}</a>`)
+    }
+    $frag.append($dd);
   }
-  $box.html('<dt>管辖城市</dt>')
+  $box.html(`<dt>管辖${isCity ? '城市' : '区县'}</dt>`)
     .append($frag);
 }
