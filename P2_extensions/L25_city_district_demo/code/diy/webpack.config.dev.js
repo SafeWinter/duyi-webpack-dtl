@@ -16,9 +16,4 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    listHtmlPlugin, 
-    detailHtmlPlugin,
-    copyWebpackPlugin
-  ]
 }

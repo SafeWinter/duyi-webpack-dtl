@@ -1,13 +1,8 @@
 const baseCfg = require('./webpack.config.base');
 const devCfg = require('./webpack.config.dev');
 const prodCfg = require('./webpack.config.prod');
+const { merge } = require('webpack-merge');
 
-module.exports = function(env) {
-  if (env && env.prod) {
-    const options = {...baseCfg, ...prodCfg };
-    return options;
-  } else {
-    const options = {...baseCfg, ...devCfg };
-    return options;
-  }
-};
+module.exports = (env) => (env && env.prod)
+  ? merge(baseCfg, prodCfg)
+  : merge(baseCfg, devCfg);

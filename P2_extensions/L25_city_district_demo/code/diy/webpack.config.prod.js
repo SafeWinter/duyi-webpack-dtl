@@ -1,12 +1,9 @@
-const { cleanWebpackPlugin, listHtmlPlugin, detailHtmlPlugin, copyWebpackPlugin } = require('./plugins');
+const { cleanWebpackPlugin } = require('./plugins');
 
 module.exports = {
   mode: 'production',
   devtool: "none",
   plugins: [
-    cleanWebpackPlugin,
-    listHtmlPlugin,
-    detailHtmlPlugin,
-    copyWebpackPlugin
+    cleanWebpackPlugin
   ],
 }

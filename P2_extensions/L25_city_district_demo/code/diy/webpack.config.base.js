@@ -1,3 +1,5 @@
+const {listHtmlPlugin, detailHtmlPlugin, copyWebpackPlugin } = require('./plugins');
+
 module.exports = {
   entry: {
     list: './src/list/index.js',
@@ -10,5 +12,10 @@ module.exports = {
     modules: false,
     builtAt: false,
     colors: true
-  }
+  },
+  plugins: [
+    listHtmlPlugin,
+    detailHtmlPlugin,
+    copyWebpackPlugin
+  ]
 }
