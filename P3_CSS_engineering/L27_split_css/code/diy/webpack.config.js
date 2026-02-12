@@ -15,5 +15,11 @@ module.exports = {
   stats: {
     builtAt: false,
     modules: false,
-  }
+  },
+  module: {
+    rules: [
+      { test: /\.css$/, use: ['css-loader'] }
+    ]
+  },
+  watch: true,
 }
