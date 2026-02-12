@@ -86,6 +86,24 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/assets/heading.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/assets/heading.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".heading {\r\n  font-style: italic;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -245,9 +263,11 @@ module.exports = function (url, options) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./heading.css */ "./node_modules/css-loader/dist/cjs.js!./src/assets/heading.css");
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ./bg.png */ "./src/assets/bg.png");
 exports = ___CSS_LOADER_API_IMPORT___(false);
+exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 exports.push([module.i, ".box {\r\n  background: center / 70% no-repeat url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-color: violet;\r\n  width: 300px;\r\n  height: 300px;\r\n  object-fit: fill;\r\n  border: 2px solid maroon;\r\n}", ""]);
@@ -284,7 +304,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 console.log(_assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a);
-console.log('banner.toString():', _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a.toString());
+console.log('banner.toString():\n', _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a.toString());
 
 const style = document.createElement('style');
 style.innerHTML = _assets_banner_css__WEBPACK_IMPORTED_MODULE_0___default.a.toString();
@@ -293,4 +313,4 @@ document.head.appendChild(style);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.14758.js.map
+//# sourceMappingURL=main.5c942.js.map
