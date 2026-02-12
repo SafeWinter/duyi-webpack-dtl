@@ -1,6 +1,8 @@
 .box {
+  background: center / 70% no-repeat url("./bg.png");
   background-color: violet;
   width: 300px;
   height: 300px;
+  object-fit: fill;
   border: 2px solid maroon;
 }
