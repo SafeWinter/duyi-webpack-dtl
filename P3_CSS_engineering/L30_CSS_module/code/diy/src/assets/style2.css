@@ -1,10 +1,10 @@
+:global(.main) {
+  font-style: italic;
+  color: maroon;
+}
 .c1 {
   color: blue;
 }
 .c2 {
   color: skyblue;
-}
-:global(.main) {
-  font-style: italic;
-  color: maroon;
 }

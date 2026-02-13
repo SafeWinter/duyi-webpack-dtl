@@ -97,7 +97,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".eDXqG6X_WfKnmIpidR8Ug {\r\n  color: blue;\r\n}\r\n._36VJnKE-yaPPeOO1S80DZg {\r\n  color: skyblue;\r\n}\r\n.main {\r\n  font-style: italic;\r\n  color: maroon;\r\n}", ""]);
+exports.push([module.i, ".main {\r\n  font-style: italic;\r\n  color: maroon;\r\n}\r\n.eDXqG6X_WfKnmIpidR8Ug {\r\n  color: blue;\r\n}\r\n._36VJnKE-yaPPeOO1S80DZg {\r\n  color: skyblue;\r\n}", ""]);
 // Exports
 exports.locals = {
 	"c1": "eDXqG6X_WfKnmIpidR8Ug",
@@ -546,4 +546,4 @@ dom.c2.classList.add(_assets_style2_css__WEBPACK_IMPORTED_MODULE_0__["c2"], 'mai
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.10197.js.map
+//# sourceMappingURL=main.f8962.js.map
