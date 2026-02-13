@@ -18,9 +18,16 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: [
+      { test: /\.css$/i, use: [ 
         'style-loader',
-        'css-loader?modules' 
+        { 
+          loader: 'css-loader', 
+          options: {
+            modules: {
+              localIdentName: "[path][name]__[local]"
+            }
+          }
+        }
       ]},
     ]
   },

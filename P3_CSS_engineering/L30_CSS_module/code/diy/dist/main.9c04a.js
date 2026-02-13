@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js?modules!./src/assets/style2.css":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js?modules!./src/assets/style2.css ***!
-  \*****************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js?!./src/assets/style1.css":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--4-1!./src/assets/style1.css ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,11 +97,11 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".main {\r\n  font-style: italic;\r\n  color: maroon;\r\n}\r\n.eDXqG6X_WfKnmIpidR8Ug {\r\n  color: blue;\r\n}\r\n._36VJnKE-yaPPeOO1S80DZg {\r\n  color: skyblue;\r\n}", ""]);
+exports.push([module.i, ".src-assets-style1__c1 {\r\n  color: violet;\r\n}\r\n.src-assets-style1__c2 {\r\n  color: blueviolet;\r\n}\r\n\r\n", ""]);
 // Exports
 exports.locals = {
-	"c1": "eDXqG6X_WfKnmIpidR8Ug",
-	"c2": "_36VJnKE-yaPPeOO1S80DZg"
+	"c1": "src-assets-style1__c1",
+	"c2": "src-assets-style1__c2"
 };
 module.exports = exports;
 
@@ -493,15 +493,15 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./src/assets/style2.css":
+/***/ "./src/assets/style1.css":
 /*!*******************************!*\
-  !*** ./src/assets/style2.css ***!
+  !*** ./src/assets/style1.css ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js?modules!./style2.css */ "./node_modules/css-loader/dist/cjs.js?modules!./src/assets/style2.css");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--4-1!./style1.css */ "./node_modules/css-loader/dist/cjs.js?!./src/assets/style1.css");
 
             content = content.__esModule ? content.default : content;
 
@@ -531,19 +531,19 @@ module.exports = content.locals || {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _assets_style2_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style2.css */ "./src/assets/style2.css");
-/* harmony import */ var _assets_style2_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_style2_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _assets_style1_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style1.css */ "./src/assets/style1.css");
+/* harmony import */ var _assets_style1_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_style1_css__WEBPACK_IMPORTED_MODULE_0__);
 
 
 const dom = {
   c1: document.querySelector('.c1'),
   c2: document.querySelector('.c2'),
 };
-
-dom.c1.classList.add(_assets_style2_css__WEBPACK_IMPORTED_MODULE_0__["c1"]);
-dom.c2.classList.add(_assets_style2_css__WEBPACK_IMPORTED_MODULE_0__["c2"], 'main');
+console.log('style1:', _assets_style1_css__WEBPACK_IMPORTED_MODULE_0___default.a);
+dom.c1.classList.add(_assets_style1_css__WEBPACK_IMPORTED_MODULE_0___default.a.c1);
+dom.c2.classList.add(_assets_style1_css__WEBPACK_IMPORTED_MODULE_0___default.a.c2);
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.f8962.js.map
+//# sourceMappingURL=main.9c04a.js.map
