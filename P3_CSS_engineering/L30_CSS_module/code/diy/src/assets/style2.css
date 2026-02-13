@@ -4,3 +4,7 @@
 .c2 {
   color: skyblue;
 }
+:global(.main) {
+  font-style: italic;
+  color: maroon;
+}
