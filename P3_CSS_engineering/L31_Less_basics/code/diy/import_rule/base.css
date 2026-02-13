@@ -1,0 +1,24 @@
+.box1 {
+  width: 80px;
+  height: 80px;
+  margin-block: 1em;
+  background-color: #f40;
+}
+.box2 {
+  width: 80px;
+  height: 80px;
+  margin-block: 1em;
+  background-color: #00e1ff;
+}
+.box3 {
+  width: 80px;
+  height: 80px;
+  margin-block: 1em;
+  background-color: orange;
+}
+.box4 {
+  width: 80px;
+  height: 80px;
+  margin-block: 1em;
+  background-color: purple;
+}

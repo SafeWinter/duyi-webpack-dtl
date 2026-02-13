@@ -1,0 +1,29 @@
+@red: #f40;
+@blue: rgb(0, 225, 255);
+@warn: orange;
+@fatal: purple;
+
+.size() {
+  width: 80px;
+  height: 80px;
+  margin-block: 1em;
+}
+.box1 {
+  .size();
+  background-color: @red;
+}
+
+.box2 {
+  .size();
+  background-color: @blue;
+}
+
+.box3 {
+  .size();
+  background-color: @warn;
+}
+
+.box4 {
+  .size();
+  background-color: @fatal;
+}

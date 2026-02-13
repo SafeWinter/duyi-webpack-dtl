@@ -1,0 +1,23 @@
+@primary: #f40;
+
+.comm() {
+  height: 100px;
+  width: 300px;
+  margin-block: 10px;
+  color: #fff;
+}
+
+.test1 {
+  .comm();
+  background-color: @primary;
+}
+
+.test2 {
+  .comm();
+  background-color: lighten(@primary, 10%);
+}
+
+.test3 {
+  .comm();
+  background-color: lighten(@primary, 20%);
+}

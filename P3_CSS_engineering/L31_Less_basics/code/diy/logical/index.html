@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S17L31 - logical function in Less</title>
+  <link rel="stylesheet" href="./logical.css">
+</head>
+<body>
+  <h1>S17L31 - if() in Less</h1>
+  <h3><pre>@some: foo;
+
+.box {
+    margin: if((2 > 1), 0, 3px);
+    color:  if((iscolor(@some)), @some, blueviolet);
+}</pre></h3>
+  <div class="box">I'm the box element</div>
+</body>
+</html>

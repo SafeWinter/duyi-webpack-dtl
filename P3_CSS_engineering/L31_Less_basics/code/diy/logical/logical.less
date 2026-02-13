@@ -1,0 +1,6 @@
+@some: foo;
+
+.box {
+    margin: if((2 > 1), 0, 3px);
+    color:  if((iscolor(@some)), @some, blueviolet);
+}

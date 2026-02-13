@@ -1,0 +1,5 @@
+.box {
+  border: 2px solid violet;
+  width: 601px;
+  font-size: calc(16px + 1em);
+}
