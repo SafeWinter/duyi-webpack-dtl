@@ -1,9 +1,14 @@
-:root {
-    --lightColor: #ddd;
-    --darkColor: #333;
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :--enter :focus, :hover;
+
+a:--enter {
+    color: #f40;
 }
 
-a {
-    color: var(--lightColor);
-    background: var(--darkColor);
+:--heading {
+    font-weight:bold;
+}
+
+:--heading.active {
+    font-weight:bold;
 }
