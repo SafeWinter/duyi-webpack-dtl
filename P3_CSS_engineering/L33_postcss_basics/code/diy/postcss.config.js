@@ -4,6 +4,7 @@ module.exports = {
     "postcss-preset-env": {
       stage: 0,
       preserve: false
-    }
+    },
+    "postcss-color-function": {}
   }
 }
