@@ -1,12 +1,14 @@
-body {
-  /* 使用颜色 #aabbcc，不做任何处理，等同于直接书写 #aabbcc */
-  color: color(#aabbcc);
-  /* 将颜色 #aabbcc 透明度设置为 90% */
-  color: color(#aabbcc a(90%));
-  /* 将颜色 #aabbcc 的红色部分设置为 90% */
-  color: color(#aabbcc red(90%));
-  /* 将颜色 #aabbcc 调亮 50%（更加趋近于白色），类似于 Less 中的 lighten() 函数 */
-  color: color(#aabbcc tint(50%));
-  /* 将颜色 #aabbcc 调暗 50%（更加趋近于黑色），类似于 Less 中的 darken() 函数 */
-  color: color(#aabbcc shade(50%));
+@import './dependant.pcss';
+
+:root {
+  --center: {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  };
+}
+
+.item{
+    @apply --center;
 }
