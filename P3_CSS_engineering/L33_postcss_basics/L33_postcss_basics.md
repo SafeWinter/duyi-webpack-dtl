@@ -493,6 +493,18 @@ module.exports = {
 
 `GitHub` 仓库地址：https://github.com/postcss/postcss-color-function
 
+操作流程：
+
+```js
+// 安装插件：npm i -D postcss-color-function@4.1.0
+// 配置插件（postcss.config.js）：
+module.exports = {
+  plugins: {
+    "postcss-color-function": {}
+  }
+}
+```
+
 该插件支持在源码中使用一些颜色函数：
 
 ```less
@@ -515,19 +527,19 @@ body {
 ```css
 body {
   /* 使用颜色 #aabbcc，不做任何处理，等同于直接书写 #aabbcc */
-  color: color(#aabbcc);
+  color: rgb(170, 187, 204);
   /* 将颜色 #aabbcc 透明度设置为 90% */
-  color: color(#aabbcc a(90%));
+  color: rgba(170, 187, 204, 0.9);
   /* 将颜色 #aabbcc 的红色部分设置为 90% */
-  color: color(#aabbcc red(90%));
+  color: rgb(230, 187, 204);
   /* 将颜色 #aabbcc 调亮 50%（更加趋近于白色），类似于 Less 中的 lighten() 函数 */
-  color: color(#aabbcc tint(50%));
+  color: rgb(213, 221, 230);
   /* 将颜色 #aabbcc 调暗 50%（更加趋近于黑色），类似于 Less 中的 darken() 函数 */
-  color: color(#aabbcc shade(50%));
+  color: rgb(85, 94, 102);
 }
 ```
 
-实测效果与笔记相同，代码详见 `0e08d82`。
+首次实测 **忘记注册插件**，导致样式转换失败（代码详见 `0e08d82`）；更正后与原课件一致（`34df2c5`）。
 
 
 
