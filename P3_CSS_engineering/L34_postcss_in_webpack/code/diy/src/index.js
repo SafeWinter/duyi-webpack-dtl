@@ -1,4 +1,4 @@
-import styles from './assets/index.pcss';
+import * as styles from "./assets/index.pcss";
 
 console.log('module index');
 

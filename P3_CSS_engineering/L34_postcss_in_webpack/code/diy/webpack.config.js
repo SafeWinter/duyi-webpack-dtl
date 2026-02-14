@@ -1,29 +1,29 @@
-const {htmlPlugin, copyPlugin, cleanPlugin} = require('./plugins');
+const { htmlPlugin, copyPlugin } = require("./plugins");
 
 const cssLoader = {
-  loader: 'css-loader',
+  loader: "css-loader",
   options: {
     modules: {
-      localIdentName: '[local]_[hash:5]'
-    }
-  }
+      localIdentName: "[local]_[hash:5]",
+    },
+  },
 };
 
 module.exports = {
-  mode: 'development',
-  devtool: 'eval-source-map',
-  plugins: [
-    copyPlugin,
-    cleanPlugin,
-    htmlPlugin
-  ],
+  mode: "development",
+  devtool: "eval-source-map",
+  plugins: [htmlPlugin, copyPlugin],
   module: {
     rules: [
-      {test: /\.pcss$/i, use: ['style-loader', cssLoader, 'postcss-loader']}
+      {
+        test: /\.pcss$/i,
+        use: ["style-loader", cssLoader, "postcss-loader"],
+      },
     ],
   },
   output: {
-    filename: '[name].[hash:5].js'
+    filename: "[name].[chunkhash:5].js",
+    clean: true,
   },
   stats: {
     modules: false,
@@ -34,4 +34,4 @@ module.exports = {
     port: 9000,
   },
   watch: true
-}
+};
