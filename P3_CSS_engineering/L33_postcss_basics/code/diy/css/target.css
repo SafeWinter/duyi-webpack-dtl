@@ -1,11 +1,4 @@
-:root {
-    --lightColor: #ddd;
-    --darkColor: #333;
-}
-
 a {
     color: #ddd;
-    color: var(--lightColor);
     background: #333;
-    background: var(--darkColor);
 }
