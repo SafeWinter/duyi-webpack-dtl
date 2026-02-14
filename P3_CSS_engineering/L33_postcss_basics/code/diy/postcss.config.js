@@ -6,6 +6,7 @@ module.exports = {
       preserve: false
     },
     "postcss-apply": {},
-    "postcss-import": {}
+    "postcss-import": {},
+    "stylelint": {}
   }
 }
