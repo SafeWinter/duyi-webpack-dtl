@@ -1,6 +1,8 @@
 module.exports = {
   map: false,
   plugins: {
-    "postcss-preset-env": {}
+    "postcss-preset-env": {
+      stage: 0
+    }
   }
 }
