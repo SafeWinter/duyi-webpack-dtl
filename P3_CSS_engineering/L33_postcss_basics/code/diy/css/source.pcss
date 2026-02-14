@@ -1,14 +1,14 @@
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-@custom-selector :--enter :focus, :hover;
+.a {
+    color: red;
+    & .b {
+        color: green;
+    }
 
-a:--enter {
-    color: #f40;
-}
+    & > .b {
+        color: blue;
+    }
 
-:--heading {
-    font-weight:bold;
-}
-
-:--heading.active {
-    font-weight:bold;
+    &:hover {
+        color: #000;
+    }
 }

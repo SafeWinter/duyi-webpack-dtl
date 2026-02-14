@@ -1,11 +1,12 @@
-a:focus,a:hover {
-    color: #f40;
+.a {
+    color: red
 }
-
-h1,h2,h3,h4,h5,h6 {
-    font-weight:bold;
-}
-
-h1.active,h2.active,h3.active,h4.active,h5.active,h6.active {
-    font-weight:bold;
-}
+.a .b {
+        color: green;
+    }
+.a > .b {
+        color: blue;
+    }
+.a:hover {
+        color: #000;
+    }
