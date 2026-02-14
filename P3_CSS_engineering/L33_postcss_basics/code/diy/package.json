@@ -4,7 +4,7 @@
   "description": "S17L33 DIY demo: PostCSS basics",
   "main": "index.js",
   "scripts": {
-    "start": "postcss css/source.pcss -o css/target.css -w"
+    "start": "postcss css/source.pcss -o css/target-cli.css -w"
   },
   "keywords": [
     "postcss",
