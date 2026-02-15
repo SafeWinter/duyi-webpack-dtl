@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S17L41 - Pipeline Operator via Babel | DIY</title>
+<link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+  <h1 class="heading">S17L41 - Pipeline Operator via Babel (DIY)</h1>
+  <h3><pre>import { filter, map, reduce, skip } from "./rx.js";
+
+const square = (num) => num ** 2;
+const isEven = (num) => num % 2 === 0;
+const add = (x, y) => x + y;
+
+let answer = 0;
+Observable.of(1, 2, 3, 4)
+  |> skip(1)
+  |> filter(isEven)
+  |> map(square)
+  |> reduce(add, 0)
+  |> ($ => $.subscribe({
+      next: value => answer += value,
+    }));
+console.log("answer:", answer);
+</pre></h3>
+<script type="text/javascript" src="main.07ae0.js"></script></body>
+</html>
