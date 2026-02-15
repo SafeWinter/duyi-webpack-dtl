@@ -13,16 +13,14 @@ const square = (num) => num ** 2;
 const isEven = (num) => num % 2 === 0;
 const add = (x, y) => x + y;
 
-let answer = 0;
 Observable.of(1, 2, 3, 4)
   |> skip(1)
   |> filter(isEven)
   |> map(square)
   |> reduce(add, 0)
   |> ($ => $.subscribe({
-      next: value => answer += value,
+      next: console.log,
     }));
-console.log("answer:", answer);
 </pre></h3>
-<script type="text/javascript" src="main.07ae0.js"></script></body>
+<script type="text/javascript" src="main.b0a6c.js"></script></body>
 </html>

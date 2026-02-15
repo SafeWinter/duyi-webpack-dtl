@@ -3757,13 +3757,9 @@ var isEven = function isEven(num) {
 var add = function add(x, y) {
   return x + y;
 };
-var answer = 0;
 _ref = (_ref2 = (_ref3 = (_ref4 = (_Observable$of = Observable.of(1, 2, 3, 4), Object(_rx_js__WEBPACK_IMPORTED_MODULE_0__["skip"])(1)(_Observable$of)), Object(_rx_js__WEBPACK_IMPORTED_MODULE_0__["filter"])(isEven)(_ref4)), Object(_rx_js__WEBPACK_IMPORTED_MODULE_0__["map"])(square)(_ref3)), Object(_rx_js__WEBPACK_IMPORTED_MODULE_0__["reduce"])(add, 0)(_ref2)), _ref.subscribe({
-  next: function next(value) {
-    return answer += value;
-  }
+  next: console.log
 });
-console.log("answer:", answer);
 
 /***/ }),
 
@@ -3913,4 +3909,4 @@ Object.assign(Observable.prototype, ReactiveExtensions);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.07ae0.js.map
+//# sourceMappingURL=main.b0a6c.js.map
