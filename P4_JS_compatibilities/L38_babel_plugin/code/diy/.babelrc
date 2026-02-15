@@ -7,7 +7,7 @@
   ],
   "plugins": [
     "@babel/proposal-function-bind",
-    "transform-remove-console",
-    "@babel/transform-runtime"
+    "transform-remove-console"
+    // "@babel/transform-runtime"
   ]
 }
