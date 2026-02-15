@@ -1,7 +1,7 @@
 {
-  "name": "s17l34-diy",
+  "name": "s17l35-diy",
   "version": "1.0.0",
-  "description": "S17L34 DIY demo: PostCSS in Webpack",
+  "description": "S17L35 DIY demo: CSS extraction with mini-css-extract-plugin",
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
