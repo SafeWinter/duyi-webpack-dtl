@@ -1,0 +1,22 @@
+._2aWe3Tih-sdWxcQSp6i6a4 {
+  background-color: #ccc;
+}
+._3xhNuVjKqsO6lqJKIc8dOR {
+  font-style: italic;
+}
+
+:root {
+  --bd-clr: #ccc;
+  --header-clr: maroon;
+  --sel-clr: #f319cf38;
+}
+
+::selection {
+  background-color: var(--sel-clr);
+}
+
+.uzWfx4j2SJqVDraUfO-gK {
+  color: var(--header-clr);
+}
+
+/*# sourceMappingURL=main.170f3.css.map*/

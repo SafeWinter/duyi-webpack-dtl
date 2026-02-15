@@ -1,5 +1,8 @@
 const path = require('node:path');
 const { htmlWebpackPlugin, copyWebpackPlugin, cleanWebpackPlugin } = require('./plugins');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {loader: extractLoader} = MiniCssExtractPlugin;
+console.log('extractLoader', extractLoader);
 
 module.exports = {
   mode: 'development',
@@ -10,7 +13,10 @@ module.exports = {
   plugins: [
     htmlWebpackPlugin,
     copyWebpackPlugin,
-    cleanWebpackPlugin
+    cleanWebpackPlugin,
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash:5].css'
+    }),
   ],
   devtool: 'source-map',
   stats: {
@@ -19,7 +25,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/i, use: ['style-loader', 'css-loader?modules']},
+      { test: /\.css$/i, use: [extractLoader, 'css-loader?modules']},
     ]
   },
   watch: true,
