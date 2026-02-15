@@ -1,0 +1,23 @@
+{
+  "name": "s17l37-diy",
+  "version": "1.0.0",
+  "description": "S17L37 DIY demo: Babel presets",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel ./src -d ./dist -w"
+  },
+  "keywords": [
+    "babel",
+    "diy"
+  ],
+  "author": "PeacefulWinter",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0"
+  },
+  "volta": {
+    "node": "14.21.3"
+  }
+}
