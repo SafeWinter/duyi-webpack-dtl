@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }]
+  ],
+  "plugins": [
+    "@babel/proposal-function-bind",
+    "transform-remove-console",
+    "@babel/transform-runtime"
+  ]
+}
