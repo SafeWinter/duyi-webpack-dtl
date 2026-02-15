@@ -1,0 +1,13 @@
+:root {
+  --bd-clr: #ccc;
+  --header-clr: maroon;
+  --sel-clr: #f319cf38;
+}
+
+::selection {
+  background-color: var(--sel-clr);
+}
+
+.heading {
+  color: var(--header-clr);
+}
