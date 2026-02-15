@@ -86,6 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js?modules!./src/assets/dependant.css":
+/*!********************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js?modules!./src/assets/dependant.css ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "._3xhNuVjKqsO6lqJKIc8dOR {\r\n  font-style: italic;\r\n}", ""]);
+// Exports
+exports.locals = {
+	"heading": "_3xhNuVjKqsO6lqJKIc8dOR"
+};
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?modules!./src/assets/index.css":
 /*!****************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js?modules!./src/assets/index.css ***!
@@ -95,7 +116,9 @@
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js?modules!./dependant.css */ "./node_modules/css-loader/dist/cjs.js?modules!./src/assets/dependant.css");
 exports = ___CSS_LOADER_API_IMPORT___(false);
+exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 // Module
 exports.push([module.i, ":root {\r\n  --bd-clr: #ccc;\r\n  --header-clr: maroon;\r\n  --sel-clr: #f319cf38;\r\n}\r\n\r\n::selection {\r\n  background-color: var(--sel-clr);\r\n}\r\n\r\n.uzWfx4j2SJqVDraUfO-gK {\r\n  color: var(--header-clr);\r\n}", ""]);
 // Exports
@@ -542,4 +565,4 @@ header.classList.add(_assets_index_css__WEBPACK_IMPORTED_MODULE_0___default.a.he
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.2df52.js.map
+//# sourceMappingURL=main.72068.js.map
