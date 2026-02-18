@@ -154,6 +154,10 @@ module.exports = {
 }
 ```
 
+实测 `exclude` 效果（`7bd53ef`）：
+
+![](../../assets/44.4.png)
+
 > [!tip]
 >
 > 这种做法是对 `loader` 的范围进行进一步的限制，和 `noParse` 选项并不冲突。
@@ -187,6 +191,14 @@ module.exports = {
 
 `cache-loader` 还可以实现各自自定义的配置，具体方式见 [npm 官方文档](https://www.npmjs.com/package/cache-loader)。
 
+实测效果（`448896e`）：
+
+![](../../assets/44.5.png)
+
+缓存文件的默认存放位置：
+
+![](../../assets/44.6.png)
+
 
 
 ## 3 为 loader 的运行开启多线程
@@ -207,3 +219,8 @@ module.exports = {
 
 **特别注意**，开启和管理线程需要消耗时间，在小型项目中使用 `thread-loader` 反而会增加构建时间。
 
+实测效果（`b508be9`）：
+
+![](../../assets/44.7.png)
+
+这证明了上面的说法：在小型项目中使用 `thread-loader` 反而会增加构建时间。
