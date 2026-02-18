@@ -1,0 +1,30 @@
+{
+  "name": "s17l44-diy",
+  "version": "1.0.0",
+  "description": "S17L44 DIY demo: loader optimizations",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "PeacefulWinter",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "babel-loader": "^8.4.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "core-js": "^3.48.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "lodash": "^4.17.23"
+  },
+  "volta": {
+    "node": "14.21.3"
+  }
+}
