@@ -1,7 +1,7 @@
 {
-  "name": "s17l41-diy",
+  "name": "s17l43-diy",
   "version": "1.0.0",
-  "description": "S17L41 DIY demo: Pipeline operator via Babel",
+  "description": "S17L43 DIY demo: Reduce Module Resolve",
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
