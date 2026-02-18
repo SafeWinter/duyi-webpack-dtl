@@ -21,7 +21,11 @@ module.exports = {
       {
         test: /\.js$/,
         // exclude: /lodash/,
-        use: ['cache-loader', 'babel-loader']
+        use: [
+          // 'cache-loader', 
+          'thread-loader',
+          'babel-loader'
+        ]
       }
     ],
   },
