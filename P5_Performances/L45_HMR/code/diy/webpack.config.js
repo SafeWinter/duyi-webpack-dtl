@@ -19,5 +19,10 @@ module.exports = {
   devServer: {
     open: true,
     hot: true
-  }
+  },
+  module: {
+    rules: [
+      {test: /\.css/i, exclude: /node_modules/, use:['style-loader', 'css-loader?modules']}
+    ]
+  },
 }

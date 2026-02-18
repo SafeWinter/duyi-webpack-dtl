@@ -1,7 +1,5 @@
-import a from './a.js';
+import './a.css';
 import _ from 'lodash';
-
-console.log('a:', a);
 
 const obj = {
   a: 1,
