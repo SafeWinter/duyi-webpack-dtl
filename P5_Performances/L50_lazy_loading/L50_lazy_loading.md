@@ -66,3 +66,16 @@ btn.addEventListener("click", async (ev) => {
 实测自定义分包名称（使用 `/* webpackChunkName: "lodash" */`，详见`dfaffee`）：
 
 ![](../../assets/50.4.png)
+
+根据 `DeepSeek` 的回复，本例 `lodash` 还可以直接导入指定的函数模块，即 `lodash-es/chunk`。经实测，效果和使用 `./util` 完全相同：
+
+```js
+console.log("module index");
+
+const btn = document.querySelector("button");
+btn.addEventListener("click", async (ev) => {
+  const { chunk } = await import(/* webpackChunkName: "lodash" */'lodash-es/chunk');
+  console.log(chunk([1, 2, 3, 4, 5, 6], 2));
+});
+```
+
