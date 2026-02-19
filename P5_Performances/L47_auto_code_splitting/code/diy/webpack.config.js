@@ -1,4 +1,4 @@
-const { htmlWebpackPlugin, copyWebpackPlugin, cleanWebpackPlugin } = require('./plugins');
+const { htmlWebpackPlugin1, htmlWebpackPlugin2, cleanWebpackPlugin } = require('./plugins');
 
 module.exports = {
   mode: 'development',
@@ -7,11 +7,11 @@ module.exports = {
     page2: './src/page2'
   },
   output: {
-    filename: '[name].[hash:5].js'
+    filename: '[name].js'
   },
   plugins: [
-    htmlWebpackPlugin,
-    copyWebpackPlugin,
+    htmlWebpackPlugin1,
+    htmlWebpackPlugin2,
     cleanWebpackPlugin,
   ],
   stats: {
@@ -20,7 +20,8 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: "all"
+      chunks: "all",
+      // maxSize: 60 * 1024, // 60Kb
     }
   },
 }

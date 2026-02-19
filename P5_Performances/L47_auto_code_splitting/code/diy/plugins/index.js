@@ -1,9 +1,10 @@
-const { htmlWebpackPlugin } = require('./htmlWebpackPlugin');
+const { htmlWebpackPlugin1, htmlWebpackPlugin2 } = require('./htmlWebpackPlugin');
 const { cleanWebpackPlugin } = require('./cleanWebpackPlugin');
 const { copyWebpackPlugin } = require('./copyWebpackPlugin');
 
 module.exports = {
-  htmlWebpackPlugin,
+  htmlWebpackPlugin1,
+  htmlWebpackPlugin2,
   copyWebpackPlugin,
   cleanWebpackPlugin
 };
