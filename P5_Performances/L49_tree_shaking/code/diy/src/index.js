@@ -1,3 +1,2 @@
-import obj from './myMath';
-const method = Math.random() < 0.5 ? 'add' : 'sub';
-console.log(obj[method](1, 2));
+import * as obj from './myMath.js';
+obj.add = () => console.log('changed add function');
