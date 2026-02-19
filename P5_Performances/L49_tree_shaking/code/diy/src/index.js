@@ -1,2 +1,2 @@
-import { add } from './myMath';
-console.log(add(1, 2));
+import obj from './myMath';
+console.log(obj.add(1, 2));
