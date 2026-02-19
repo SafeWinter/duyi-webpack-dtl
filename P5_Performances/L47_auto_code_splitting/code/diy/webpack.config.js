@@ -21,7 +21,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: "all",
-      // maxSize: 60 * 1024, // 60Kb
+      maxSize: 60 * 1024, // 60Kb
     }
   },
 }
