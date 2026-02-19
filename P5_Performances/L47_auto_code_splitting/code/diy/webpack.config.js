@@ -18,4 +18,9 @@ module.exports = {
     builtAt: false,
     modules: false,
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
 }
