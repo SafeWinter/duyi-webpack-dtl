@@ -1,2 +1,3 @@
-import { add } from "./myMath";
-console.log(add(1, 2));
+import "./common.js";
+
+console.log('module index');
