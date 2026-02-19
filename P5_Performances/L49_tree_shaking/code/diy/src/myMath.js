@@ -7,4 +7,8 @@ export default {
     console.log("sub");
     return a - b;
   },
+  mul(a, b) {
+    console.log("mul");
+    return a * b;
+  }
 };

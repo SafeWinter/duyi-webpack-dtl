@@ -1,41 +1,41 @@
 !(function (e) {
   var t = {};
-  function r(n) {
-    if (t[n]) return t[n].exports;
-    var o = (t[n] = { i: n, l: !1, exports: {} });
-    return (e[n].call(o.exports, o, o.exports, r), (o.l = !0), o.exports);
+  function n(r) {
+    if (t[r]) return t[r].exports;
+    var o = (t[r] = { i: r, l: !1, exports: {} });
+    return (e[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports);
   }
-  ((r.m = e),
-    (r.c = t),
-    (r.d = function (e, t, n) {
-      r.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+  ((n.m = e),
+    (n.c = t),
+    (n.d = function (e, t, r) {
+      n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
     }),
-    (r.r = function (e) {
+    (n.r = function (e) {
       ("undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 }));
     }),
-    (r.t = function (e, t) {
-      if ((1 & t && (e = r(e)), 8 & t)) return e;
+    (n.t = function (e, t) {
+      if ((1 & t && (e = n(e)), 8 & t)) return e;
       if (4 & t && "object" == typeof e && e && e.__esModule) return e;
-      var n = Object.create(null);
+      var r = Object.create(null);
       if (
-        (r.r(n),
-        Object.defineProperty(n, "default", { enumerable: !0, value: e }),
+        (n.r(r),
+        Object.defineProperty(r, "default", { enumerable: !0, value: e }),
         2 & t && "string" != typeof e)
       )
         for (var o in e)
-          r.d(
-            n,
+          n.d(
+            r,
             o,
             function (t) {
               return e[t];
             }.bind(null, o),
           );
-      return n;
+      return r;
     }),
-    (r.n = function (e) {
+    (n.n = function (e) {
       var t =
         e && e.__esModule
           ? function () {
@@ -44,21 +44,23 @@
           : function () {
               return e;
             };
-      return (r.d(t, "a", t), t);
+      return (n.d(t, "a", t), t);
     }),
-    (r.o = function (e, t) {
+    (n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (r.p = ""),
-    r((r.s = 0)));
+    (n.p = ""),
+    n((n.s = 0)));
 })([
-  function (e, t, r) {
+  function (e, t, n) {
     "use strict";
-    r.r(t);
-    var n = {
+    n.r(t);
+    var r = {
       add: (e, t) => (console.log("add"), e + t),
       sub: (e, t) => (console.log("sub"), e - t),
+      mul: (e, t) => (console.log("mul"), e * t),
     };
-    console.log(n.add(1, 2));
+    const o = Math.random() < 0.5 ? "add" : "sub";
+    console.log(r[o](1, 2));
   },
 ]);
