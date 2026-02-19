@@ -1,4 +1,5 @@
-const { htmlWebpackPlugin1, htmlWebpackPlugin2, cleanWebpackPlugin } = require('./plugins');
+const { cleanWebpackPlugin } = require('./plugins');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,9 +11,11 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    htmlWebpackPlugin1,
-    htmlWebpackPlugin2,
     cleanWebpackPlugin,
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash:5].css',
+      chunkFilename: 'common.[hash:5].css'
+    })
   ],
   stats: {
     builtAt: false,
@@ -21,7 +24,22 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: "all",
-      maxSize: 60 * 1024, // 60Kb
+      // maxSize: 60 * 1024, // 60Kb
+      cacheGroups: {
+        styles: {
+          test: /\.css$/,
+          minSize: 0,  // 覆盖默认的最小尺寸，这里仅仅是作为测试
+          minChunks: 2 // 覆盖默认的最小 Chunk 引用数
+        }
+      }
     }
+  },
+  module: {
+    rules: [
+      {test: /\.css$/, use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+      ]}
+    ]
   },
 }
