@@ -1,0 +1,19 @@
+body {
+  background-color: #ccc;
+}
+
+.heading {
+  font-style: italic;
+}
+
+h3 {
+  color: maroon;
+}
+
+h4 {
+  color: green;
+}
+
+.violet {
+  color: violet;
+}
