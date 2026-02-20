@@ -1,7 +1,3 @@
-async function demo() {
-  const a = 1;
-  return Promise.resolve(a);
+if (Math.random() > 0.5) {
+  console.log('bingo')
 }
-
-console.log(demo()
-  .then(console.log));
