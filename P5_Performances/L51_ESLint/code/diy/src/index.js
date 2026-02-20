@@ -1,4 +1,7 @@
-let a = 1;
-function abc() {
-   return 0;
+async function demo() {
+  const a = 1;
+  return Promise.resolve(a);
 }
+
+console.log(demo()
+  .then(console.log));
