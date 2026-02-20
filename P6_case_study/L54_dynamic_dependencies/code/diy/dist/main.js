@@ -95,31 +95,23 @@
 
 console.log('module index');
 
-const moduleName = document.querySelector('input').value;
-const content = __webpack_require__("./src/utils sync recursive ^\\.\\/.*$")(`./${moduleName}`);
-console.log(content);
-
+const utils = __webpack_require__(/*! ./utils */ "./src/utils/index.js");
+console.log({utils});
 
 /***/ }),
 
-/***/ "./src/utils sync recursive ^\\.\\/.*$":
-/*!*********************************!*\
-  !*** ./src/utils sync ^\.\/.*$ ***!
-  \*********************************/
+/***/ "./src/utils sync \\.js$":
+/*!*******************************************!*\
+  !*** ./src/utils sync nonrecursive \.js$ ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./": "./src/utils/index.js",
-	"./a": "./src/utils/a.js",
 	"./a.js": "./src/utils/a.js",
-	"./b": "./src/utils/b.js",
 	"./b.js": "./src/utils/b.js",
-	"./c": "./src/utils/c.js",
 	"./c.js": "./src/utils/c.js",
-	"./d": "./src/utils/d.js",
 	"./d.js": "./src/utils/d.js",
-	"./index": "./src/utils/index.js",
 	"./index.js": "./src/utils/index.js"
 };
 
@@ -141,7 +133,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = "./src/utils sync recursive ^\\.\\/.*$";
+webpackContext.id = "./src/utils sync \\.js$";
 
 /***/ }),
 
@@ -196,10 +188,18 @@ module.exports = "d";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.a = __webpack_require__(/*! ./a */ "./src/utils/a.js");
-exports.b = __webpack_require__(/*! ./b */ "./src/utils/b.js");
-exports.c = __webpack_require__(/*! ./c */ "./src/utils/c.js");
-exports.d = __webpack_require__(/*! ./d */ "./src/utils/d.js");
+// exp / imp all JS modules in batch with require.context() API
+
+const req = __webpack_require__("./src/utils sync \\.js$");
+
+console.log(req.keys());
+
+for (const moduleId of req.keys()) {
+  if(moduleId !== './index.js') {
+    const fileName = /\.\/(.*)\.js$/.exec(moduleId)[1];
+    exports[fileName] = req(moduleId);
+  }
+}
 
 /***/ })
 
