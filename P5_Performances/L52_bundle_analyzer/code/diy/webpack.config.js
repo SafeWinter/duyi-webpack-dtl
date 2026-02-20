@@ -10,7 +10,9 @@ module.exports = {
   plugins: [
     cleanWebpackPlugin,
     htmlWebpackPlugin,
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static'
+    })
   ],
   stats: {
     builtAt: false,
