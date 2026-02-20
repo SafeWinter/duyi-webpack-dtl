@@ -191,15 +191,17 @@ module.exports = "d";
 // exp / imp all JS modules in batch with require.context() API
 
 const req = __webpack_require__("./src/utils sync \\.js$");
+const REG_EXP = /\.\/(.*)\.js$/;
 
 console.log(req.keys());
 
-for (const moduleId of req.keys()) {
-  if(moduleId !== './index.js') {
-    const fileName = /\.\/(.*)\.js$/.exec(moduleId)[1];
-    exports[fileName] = req(moduleId);
-  }
-}
+req.keys()
+  .filter(id => id !== './index.js')
+  .filter(id => REG_EXP.test(id))
+  .forEach(moduleId => {
+    const moduleName = REG_EXP.exec(moduleId)[1];
+    exports[moduleName] = req(moduleId);
+  });
 
 /***/ })
 
