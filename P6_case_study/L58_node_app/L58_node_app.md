@@ -112,10 +112,13 @@ module.exports = {
 ```js
 module.exports = {
   target: "node",  // 默认值 "web"
+  node: false  // 关闭 Webpack 针对 node 的模拟行为
 };
 ```
 
 这样才能正确识别 `NodeJS` 的内置模块（如 `fs`、`http` 等）。
+
+如果 `node` 不设为 `false`，则 `Webpack` 会自行模拟 `node` 环境下的某些全局变量（如 `__dirname`），因此需要关闭。
 
 
 
@@ -124,3 +127,7 @@ module.exports = {
 实测效果截图：
 
 ![](../../assets/58.1.png)
+
+实测开发模型运行（`dev` 脚本中的引号须改为 **转以后的双引号**，否则在 `Windows` 环境下会报错）：
+
+![](../../assets/58.2.png)

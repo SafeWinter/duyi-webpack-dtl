@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec 'npm run dev:build && npm run dev:exec'",
+    "dev": "nodemon --watch src --exec \"npm run dev:build && npm run dev:exec\"",
     "dev:build": "cross-env NODE_ENV=development webpack",
     "dev:exec": "node dist/index",
     "build": "cross-env NODE_ENV=production webpack"
