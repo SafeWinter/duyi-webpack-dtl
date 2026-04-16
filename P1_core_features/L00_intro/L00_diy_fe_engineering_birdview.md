@@ -60,7 +60,7 @@
 解决方案：模块化。
 
 - 官方标准：**ES Module**
-- 社区标准：**CommonJS**（AMD、CMD、UMD 次之）
+- 社区标准：**CommonJS**（`AMD`、`CMD`、`UMD` 次之）
 
 每个 `JS` 文件均视为一个模块，每个模块既可以有自己的内部实现，又可以导出某些功能供外部使用：
 
@@ -154,12 +154,11 @@ console.log(sum);
 > npm i jquery@1
 # 快速卸载 jQuery 包
 > npm uninstall jquery # 或 npm un jquery
-
 ```
 
 
 
-前端的模块化和包管理虽然不能解决前端的所有问题，但它们是前端工程化的起点，其管理模式和设计理念将深刻地影响前端的发展（案例：莱特兄弟发明飞机）。
+前端的模块化和包管理虽然不能解决前端的所有问题，但它们是前端工程化的 **起点**，其管理模式和设计理念将深刻地影响前端的发展（案例：莱特兄弟发明飞机）。
 
 
 
@@ -205,7 +204,7 @@ console.log(sum);
 
 配置文件：`babel.config.js`
 
-`Babel` 不仅是一个解决语言兼容性问题的专用工具，学习时也可以利用它来观察编译后的结果，从而学习某些语法、API 实现思路。
+`Babel` 不仅是一个解决语言兼容性问题的专用工具，学习时也可以利用它来观察编译后的结果，从而学习某些语法、`API` 实现思路。
 
 > [!tip]
 >
@@ -272,7 +271,7 @@ $bcolor: #036
   @include abs-center
 ```
 
-CSS 预编译器的主要作用：提升开发效率和质量。
+`CSS` 预编译器的主要作用：提升开发效率和质量。
 
 
 
@@ -440,7 +439,7 @@ module.exports = {
    7. `Fis3`
    8. `Snowpack`
 4. 脚手架
-   1. `Vite`（`ESBuild + Rollup`）
+   1. `Vite`（`ESBuild + Rollup`，从 `vite8` 开始变为 `Rolldown` 单引擎驱动）
    2. `vue-cli`（`Webpack`）
    3. `umijs`（`Webpack`）
    4. `create-react-app`（`Webpack`）
